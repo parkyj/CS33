@@ -1,0 +1,6 @@
+int rotateRight(int x, int n) {
+  int i = (!!n << 31 >> 31) ^ (((!!n << 31) >> (31 ^ n)));
+  int a = (x >> ((31 ^ n) + 1)) & i;
+  int b = x << n;
+  return b;
+}
